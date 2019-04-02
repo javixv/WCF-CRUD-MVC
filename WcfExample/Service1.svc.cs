@@ -15,7 +15,7 @@ namespace WcfExample
     public class Service1 : IMisServicios
     {
         // Mi cadena de conexion example "Data Source=.;Initial Catalog=pruebas;User ID=sa;Password=123"
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=pruebas;Integrated Security=SSPI;");
+        SqlConnection con = new SqlConnection(@"Data Source=JAVIER-PC\SQLEXPRESS;Initial Catalog=pruebas;Integrated Security=SSPI;");
 
         public bool DeleteEmployee(int EmployeeInfo)
         {
