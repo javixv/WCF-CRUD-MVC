@@ -9,7 +9,9 @@ namespace MvcClientWeb.Controllers
 {
     public class EmployeeController : Controller
     {
+        // My object client
         ServiceReference1.MisServiciosClient cliente = new ServiceReference1.MisServiciosClient();
+        // My DataMember
         ServiceReference1.EmployeeDetails DM = new ServiceReference1.EmployeeDetails();
         
 

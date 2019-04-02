@@ -41,8 +41,10 @@
         @Html.AntiForgeryToken()
         @Html.HiddenFor(model => model.ID)
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <button type="button" class="btn btn-link">
+                @Html.ActionLink("Back to List", "Index")
+                </button>
+</div>
     }
 </div>

@@ -28,8 +28,8 @@ namespace WcfExample
         [OperationContract]
         bool DeleteEmployee(int EmployeeInfo);
 
-        //[OperationContract]
-        //bool FindById();
+        [OperationContract]
+        bool FindById(int id);
     }
 
 

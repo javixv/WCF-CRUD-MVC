@@ -34,6 +34,19 @@ namespace WcfExample
             }
         }
 
+        public bool FindById(int id)
+        {
+            con.Open();
+            string query = "select * from Employee where id = @ID";
+            SqlCommand cmd = new SqlCommand(query,con);
+            cmd.Parameters.AddWithValue("@ID", id);
+            int res = cmd.ExecuteNonQuery();
+            if(res == 1)
+            {
+                return true;
+            }else { return false; }
+        }
+
         public List<EmployeeDetails> GetAllEmployee()
         {
             // Abrir Conexion
