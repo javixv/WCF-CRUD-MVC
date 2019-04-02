@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MvcClientWeb.Models.MvcEmployee>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Index List of Employees</h2>
+
+<p>
+    @Html.ActionLink("Create New Employee", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.salary)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (MvcClientWeb.Models.MvcEmployee item in ViewBag.MiListado) {
+    <tr><td>
+    @Html.DisplayFor(modelItem => item.ID)
+</td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.salary)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Update", new { name=item.name }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.ID }) |*@
+            @Html.ActionLink("Delete", "Delete", new { name=item.name })
+        </td>
+    </tr>
+}
+
+</table>
